@@ -4,7 +4,7 @@
 
 	<!--<include file="$(find serial_imu)/launch/imu_msg.launch">
 	</include>-->
-	<include file="$(find chris)/launch/G4_with_ns.launch">
+	<include file="$(find scout_robot)/launch/G4_with_ns.launch">
 	        <arg name="ns" value="$(arg ns)"/>
 	</include>
 	
