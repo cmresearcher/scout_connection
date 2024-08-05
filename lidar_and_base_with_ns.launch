@@ -9,11 +9,11 @@
 
 
 	<group ns="$(arg ns)">
-		<include file="$(find chris)/launch/open_rslidar_with_ns.launch">
+		<include file="$(find scout_robot)/launch/open_rslidar_with_ns.launch">
 			<arg name="ns" default="$(arg ns)" />
 		</include>
 
-		<include file="$(find chris)/launch/scout_mini_base_with_ns.launch">
+		<include file="$(find scout_robot)/launch/scout_mini_base_with_ns.launch">
 			<arg name="ns" default="$(arg ns)" />
 			<arg name="port_name" default="can0" />
 			<arg name="simulated_robot" default="false" />
