@@ -1,0 +1,13 @@
+<?xml version="1"?>
+<!-- 
+  to save resources on the car computer, only run lidar and base
+  run move_base, amcl, map_saver, and velocity_smoother on laptop
+-->
+<launch>
+  <include file="$(find scout_robot)/launch/scout_mini_base.launch">
+      <arg name="port_name" default="can0" />
+      <arg name="simulated_robot" default="false" />
+  </include>
+
+  <include file="$(find scout_robot)/launch/open_rslidar.launch"></include>
+</launch>

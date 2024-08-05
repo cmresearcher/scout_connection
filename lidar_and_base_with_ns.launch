@@ -1,0 +1,23 @@
+<?xml version="1"?>
+<!-- 
+  by Chris
+  to save resources on the car computer, only run lidar and base
+  run move_base, amcl, map_saver, and velocity_smoother on laptop
+-->
+<launch>
+	<arg name="ns" doc="namespace for this launch, for example: ns:=car14"/>
+
+
+	<group ns="$(arg ns)">
+		<include file="$(find chris)/launch/open_rslidar_with_ns.launch">
+			<arg name="ns" default="$(arg ns)" />
+		</include>
+
+		<include file="$(find chris)/launch/scout_mini_base_with_ns.launch">
+			<arg name="ns" default="$(arg ns)" />
+			<arg name="port_name" default="can0" />
+			<arg name="simulated_robot" default="false" />
+		</include>
+	
+	</group>
+</launch>
